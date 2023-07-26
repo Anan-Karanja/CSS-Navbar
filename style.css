@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -19,7 +20,7 @@ nav ul {
 }
 
 nav ul li {
-    background: #B77A31;
+    background: #413d37;
     float: left;
     height: 70px;
     width: 200px;
