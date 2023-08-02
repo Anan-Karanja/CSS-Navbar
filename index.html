@@ -3,41 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewporrt" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44110e6aa1.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="style.css">
-    <title>CSS Navbar</title>
+    <title>Dropdown Menu</title>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li> <a href="#">Home</a></li>
-            <li> <a href="#">Services</a></li>
-            <li> <a href="#">About</a>
-                <ul>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Clients</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Legacy</a></li>
-                </ul>
-            </li>
-            <li> <a href="#">Projects</a></li>
-            <li> <a href="#">Contacts</a>
-                <ul>
-                    <li><a href="#">Email</a></li>
-                    <li><a href="#">Phone</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Twitter</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="nav_bar">
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="#"><img src="./Anan logo for website.png" alt="" width="65"></a>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li>
+                    <a href="#services">Services</a>
+                    <ul>
+                        <li><a href="">Serv1</a></li>
+                        <li><a href="">Serv2</a></li>
+                        <li><a href="">Serv3</a></li>
+                        <li><a href="">Serv4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li>
+                    <a href="#contacts">Contacts</a>
+                    <ul>
+                        <li><a href="#phone">Phone</a></li>
+                        <li><a href="#email">Email</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#tiktok">Tiktok</a></li>
+                        <li><a href="#facebook">Facebook</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </body>
-<script>
-    console.log("Hey");
-    setTimeout(()=>{
-        console.log("Hallo");
-    },10);
-    console.log("Hi");
-</script>
+
 </html>

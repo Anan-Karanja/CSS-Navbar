@@ -1,51 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,800;0,900;1,300;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
 }
 
-body{
-    background: #ededed;
+body {
+    min-height: 100vh;
+    background: url(./bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-/* nav {
-} */
-
-nav ul {
-    list-style-type: none;
+header .nav_bar {
+    position: fixed;
+    width: 100%;
+    padding: 20px 7%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #9c5f26;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
 }
 
-nav ul li {
-    background: #413d37;
+header .nav_bar ul {
+    list-style: none;
+}
+
+header .nav_bar ul li {
+    position: relative;
     float: left;
-    height: 70px;
-    width: 200px;
-    line-height: 60px;
-    text-align: center;
+}
+
+header .nav_bar ul li a {
+    padding: 15px;
     font-size: 20px;
-}
-
-ul li a{
+    color: aliceblue;
+    display: block;
+    transition: .2s;
     text-decoration: none;
-    color: #fff5f5;
-    display: block;
-    transition: .2s ease;
 }
 
-ul li a:hover {
-    background-color: #ffc988;
-    color: #393939;
+header .nav_bar ul li a:hover {
+    background-color: #f8f8f8;
+    color: #9c5f26;
+    border-radius: 3px;
 }
 
-ul li ul li {
+/* This is the dropdown menu */
+header .nav_bar ul li ul {
+    position: absolute;
+    background: #cd8b3a;
+    color: #9c5f26;
+    border-radius: 3px;
+    left: 0;
+    width: 150px;
     display: none;
-
 }
 
-ul li:hover ul li{
-    display: block;
+header .nav_bar ul li ul li {
+    width: 100%;
+}
+
+/* This makes the dropdown menu show */
+header .nav_bar ul li:focus-within > ul,
+header .nav_bar ul li:hover>ul {
+    display: initial;
+}
+
+/* Media queries */
+
+@media(max-width:991px){
+    header {
+        padding: 20px;
+    }
+}
+
+#menu-bar {
+    display: none;
+}
+
+header .nav_bar label > i {
+    font-size: 30px;
+    color: #f8f8f8;
+    cursor: pointer;
+    display: none;
 }
